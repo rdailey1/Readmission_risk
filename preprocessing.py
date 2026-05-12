@@ -50,8 +50,10 @@ def preprocess_data():
     processed_df["readmitted"] = target.values
 
     # Save fragment of preprocessed dataset. currently stalling at save process of whole set
+    # not actually required for use, but saved to view the format of processed data
     processed_df.head(1000).to_csv("data/processed/preprocessed_diabetes_sample.csv", index=False)
 
     print("Preprocessed sample saved to data/processed/preprocessed_diabetes_sample.csv")
 
+    # returns the full 100k records to be used for training
     return processed_df
