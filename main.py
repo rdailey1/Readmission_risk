@@ -1,5 +1,5 @@
 from preprocessing import preprocess_data
-from model_training import train_models, evaluate_models,perform_cross_validation
+from model_training import train_models, evaluate_models, perform_cross_validation, tune_models
 
 processed_df = preprocess_data()
 
@@ -22,4 +22,18 @@ perform_cross_validation(
     y_train
 )
 
-print("Preprocessing, training, evaluation, and cross-validation complete from main.")
+tuned_logistic_model, tuned_random_forest_model = tune_models(
+    X_train,
+    y_train
+)
+
+print("\nTuned Model Evaluation")
+evaluate_models(
+    tuned_logistic_model,
+    tuned_random_forest_model,
+    X_test,
+    y_test
+)
+
+print("Preprocessing, training, pre-tuning evaluation, and cross-validation, " \
+"post-tuning evaluation complete from main.")

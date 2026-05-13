@@ -1,2 +1,3 @@
-## D683 Advanced AI and ML
-Students run the CI Pipeline to create your D683 Advanced AI and ML project for completing the PA
+notes to self...
+
+Although the current project predicts readmission as a binary classification problem, future expansion could focus on producing patient-specific probability risk estimates using functions such as predict_proba() to better support clinical prioritization and intervention planning. Beyond simply identifying whether a patient is likely to be readmitted, future versions of the project could incorporate explainable AI techniques such as feature importance analysis or SHAP values to help clinicians understand why a patient was flagged as high risk. This would make the system more actionable in real-world clinical environments by supporting targeted interventions rather than functioning as a purely black-box prediction system. Also, logistic regressor is perhaps poorly named. RFR indicates numerical range but RFC (random forest classifier) is binary since the app predicts on yes/no basis. logistic regressor is also binary in its predictions.
